@@ -1,39 +1,12 @@
 class Solution {
 public:
     int maximum69Number (int num) {
-        for (int i = 1000; i > 0; i /= 10) {
-            if ((num / i) % 10 == 6) {
-                num += 3 * i;
-                break;
-            }
+        string s = to_string(num);
+        for (int i = 0 ; i < s.size() ; i++) 
+        if (s[i] == '6') {
+            s[i] = '9';
+            break;
         }
-        return num;
+        return stoi(s);
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
